@@ -21,6 +21,10 @@ public class CarDaoImpl implements CarDao{
         carsList.add(new Car("Nissan", 222, 2010));
         carsList.add(new Car("Kia", 131, 2017));
 
+        if (number>carsList.size()){
+            number = carsList.size();
+        }
+
         return carsList.subList(0, number);
     }
 }
